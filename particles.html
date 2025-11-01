@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="co-authored by Alexis Laly and Olivier Nocent">
+  <meta name="description"
+    content="An AR app that displays a DBZ-style hair according to the number of squats performed.">
+  <meta name="keywords" content="augmented reality, pose estimation, manga, squat">
+  <title>Manga Squat Challenge</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.0/addons/p5.sound.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      ;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvas"></div>
+  <script>
+    class Particle {
+      constructor(state) {
+        this.position = state[0].copy();
+        this.velocity = state[1].copy();
+        this.angle = state[1].heading();
+        this.lifetime = 50 + Math.random() * 50;
+      }
+
+      update(dt) {
+        this.position.add(p5.Vector.mult(this.velocity, dt));
+        //this.velocity.mult(0.9);
+        this.lifetime--;
+      }
+
+      draw() {
+        fill(0, 255, 255, 0.4 * this.lifetime / 100);
+        push();
+        translate(this.position.x, this.position.y)
+        rotate(this.angle + PI/2);
+        translate(-this.position.x, -this.position.y)
+        triangle(this.position.x - 30, this.position.y, this.position.x + 30, this.position.y, this.position.x, this.position.y - 80);
+        pop();
+      }
+    }
+
+    class ParticleSystem {
+      constructor(begin, end, direction) {
+        this.begin = begin.copy();
+        this.end = end.copy();
+        this.direction = direction;
+        this.pool = []
+      }
+
+      initialState() {
+        let c = Math.random();
+
+        let position = p5.Vector.add(p5.Vector.mult(this.begin, 1 - c), p5.Vector.mult(this.end, c));
+
+        let angle = map(c, 0, 1, -PI / 4, PI / 4);
+        let velocity = createVector(this.direction * 400 * cos(angle), 400 * sin(angle));
+
+        return [position, velocity];
+      }
+
+      add(n) {
+        for (let i = 0; i < n; i++)
+          this.pool.push(new Particle(this.initialState()))
+      }
+
+      draw() {
+        for (let i = 0; i < this.pool.length; i++) {
+          this.pool[i].update(1 / 30);
+          if (this.pool[i].lifetime < 0) this.pool[i] = new Particle(this.initialState());
+          this.pool[i].draw();
+        }
+      }
+    }
+
+    let pointCount = 0;
+    let p0, p1, particleSystem;
+
+    function setup() {
+      let canvas = createCanvas(windowWidth, windowHeight);
+      canvas.parent("canvas");
+
+      colorMode(RGB, 255, 255, 255, 1);
+    }
+
+    function draw() {
+      background(200);
+      if (pointCount == 2) {
+        strokeWeight(4);
+        stroke(0);
+        line(p0.x, p0.y, p1.x, p1.y);
+
+        fill(255);
+        circle(p0.x, p0.y, 20);
+        circle(p1.x, p1.y, 20);
+
+        fill(0, 255, 255, 0.4);
+        noStroke();
+        particleSystem.draw();
+      }
+    }
+
+    function mousePressed() {
+      switch (pointCount) {
+        case 0:
+          p0 = createVector(mouseX, mouseY);
+          pointCount++;
+          break;
+        case 1:
+          p1 = createVector(mouseX, mouseY);
+          pointCount++;
+          particleSystem = new ParticleSystem(p0, p1, -1);
+          particleSystem.add(1000);
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>
