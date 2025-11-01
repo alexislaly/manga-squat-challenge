@@ -124,6 +124,23 @@
           break;
       }
     }
+
+    function touchEnded() {
+      switch (pointCount) {
+        case 0:
+          p0 = createVector(mouseX, mouseY);
+          pointCount++;
+          break;
+        case 1:
+          p1 = createVector(mouseX, mouseY);
+          pointCount++;
+          particleSystem = new ParticleSystem(p0, p1, -1);
+          particleSystem.add(1000);
+          break;
+        default:
+          break;
+      }
+    }
   </script>
 </body>
 
