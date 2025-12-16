@@ -172,7 +172,7 @@ function draw() {
           createVector(pose.left_hip.x, pose.left_hip.y));
 
         let shoulderWidth = distance(rightShoulder, leftShoulder);
-        let proximityThreshold = shoulderWidth * 1.5;
+        let proximityThreshold = shoulderWidth * 1.3;
         let currentDistance = distance(leftHip, leftAnkle);
 
         if (currentDistance < proximityThreshold) {
