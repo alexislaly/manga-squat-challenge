@@ -215,14 +215,6 @@ function draw() {
   if (captureReady) {
     push();
 
-    
-    //Gestion du miroir caméra avant
-    if (currentFacingMode === "user") {
-
-      translate(width, 0);
-      scale(-1, 1);
-    }
-
     translate(captureOffsetX, 0);
     scale(
       captureScaleFactor,
