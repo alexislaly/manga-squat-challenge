@@ -214,7 +214,10 @@ function setup() {
   // Bouton changement caméra
   switchButton = createButton("📷");
 
-  switchButton.position(20, 20);
+  switchButton.position(
+  width / 2 - 25,
+  height - 80
+);
 
   switchButton.style("font-size", "28px");
 
