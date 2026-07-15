@@ -20,18 +20,18 @@ hashtags`#mangasquatchallenge` and `@bureims`
 
 ## Credits
 
-Ce projet a été développé dans le cadre de l’événement Sport et
-Manga, organisé par la bibliothèque universitaire de
-l’université de Reims Champagne Ardenne.
+This project was developped for the event "Sport et Manga", 
+organised by the University Library of the University 
+of Reims Champagne Ardenne, Reims, France.
 
-> Aucune information personnelle, aucune image n'est enregistrée
-> par l'application.
+> No personal information or images
+> are stored by the application.
 
-![Alexis Laly, docteur en STAPS](img/alexis-laly.jpg)
-Alexis Laly, docteur en STAPS 
+![Alexis Laly, Ph.D in Biomechanics](img/alexis-laly.jpg)
+Alexis Laly, Ph.D in Biomechanics 
 
-![Olivier Nocent, enseignant-chercheur en informatique](img/olivier-nocent.jpg)
-Olivier Nocent, enseignant-chercheur en STAPS
+![Olivier Nocent, Lecturer in Informatics and Sport Science](img/olivier-nocent.jpg)
+Olivier Nocent, Lecturer in Informatics and Sport Sciences
 
 ---
 
