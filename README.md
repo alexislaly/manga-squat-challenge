@@ -1,26 +1,24 @@
 ![Manga Squat Challenge](img/logo.png)
 
-Devient un.e guerrier.e légendaire en faisant des squats en réalité
-augmentée !
+Become a legendary warrior by doind squat in augmented reality!
 
 ![https://oliviernocent.github.io/manga-squat-challenge](img/qr-code.png)
 
-## Comment ça marche ?
+## How does it work?
 
-1. Flashe le QR code pour lancer l'application sur ton smartphone
-2. Autorise l'application à accéder à la caméra
-3. Oriente la caméra vers une personne (celle qui va faire des
-squats). *La personne doit être visible de la tête aux pieds*
-4. A toi de jouer : SQUAT ! SQUAT ! SQUAT ! SQUAT ! SQUAT !
+1. Scan the QR code to launch the app on your smartphone
+2. Allow the app to access the camera
+3. Point the camera at the person who will be doing the squats. 
+*The person must be fully visible from head to toe.*
+4. Your turn: SQUAT ! SQUAT ! SQUAT ! SQUAT ! SQUAT !
 
-Observe l’évolution à mesure que le compteur augmente et devient
-un.e **guerrier.e de légende** !
+Watch your transformation as the counter increases and become 
+a **legendary warrior** !
 
-Fais une capture d'écran et partage la sur
-les réseaux avec les hashtags `#mangasquatchallenge`
-et `@bureims`
+Take a screenshot and share it on social media using the 
+hashtags`#mangasquatchallenge` and `@bureims`
 
-## Crédits
+## Credits
 
 Ce projet a été développé dans le cadre de l’événement Sport et
 Manga, organisé par la bibliothèque universitaire de
