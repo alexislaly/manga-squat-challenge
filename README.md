@@ -33,6 +33,12 @@ Alexis Laly, Ph.D in Biomechanics
 ![Olivier Nocent, Lecturer in Informatics and Sport Science](img/olivier-nocent.jpg)
 Olivier Nocent, Lecturer in Informatics and Sport Sciences
 
+## Get the free app!
+
+Like it? Get Manga Squat Challenge on yout smart as a web app.
+Here is an exemple on Iphone. 
+![](img/webapp.jpg)
+
 ---
 
 Université de Reims Champagne Ardenne &copy; 2024
