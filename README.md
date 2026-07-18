@@ -1,6 +1,6 @@
 ![Manga Squat Challenge](img/logo.png)
 
-Become a legendary warrior by doind squat in augmented reality!
+Become a legendary warrior by doing squats in Augmented Reality!
 
 ![https://oliviernocent.github.io/manga-squat-challenge](img/qr-code.png)
 
