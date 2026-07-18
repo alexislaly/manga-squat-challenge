@@ -37,7 +37,7 @@ Olivier Nocent, Lecturer in Informatics and Sport Sciences
 
 Like it? Get Manga Squat Challenge on yout smart as a web app.
 Here is an exemple on Iphone. 
-![](img/webapp.jpg)
+![](img/webapp.png)
 
 ---
 
